@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .calc-body{
+        width: 349px;
+        height: 526px;
+        border: #202020 solid 2px;
+        .calc-display{
+            background-color: #202020;
+            margin: 0;
+            height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            h4{
+                color: white;
+                font-weight: 900;
+                margin: 0;
+                font-size: 60px;
+                margin: 10px;
+            }
+        }
+        .calc-keyboard{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 85px);
+            column-gap: 2px;
+            .calc-button{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h4{
+                    font-weight: 300;
+                    font-size: 40px;
+                    font-family:Arial, Helvetica, sans-serif;
+                }
+            }
+            .calc-button.small{
+                width: 85px;
+                height: 85px;
+            }
+            .calc-button.big{
+                width: 172px;
+                height: 85px;
+                grid-column-start: span 2;
+            }
+            .calc-button.number{
+                background-color: #c7c7c7;
+                border: #b7b7b7 solid 2px;
+                h4{
+                    color: #3f4042;
+                }
+            }
+            .calc-button.number:hover{
+                background-color: #b7b7b7;
+            }
+            .calc-button.function{
+                background-color: #afb0b5;
+                border: #a1a2a6 solid 2px;
+                h4{
+                    color: #3f4042;
+                }
+            }
+            .calc-button.function:hover{
+                background-color: #a1a2a6;
+            }
+            .calc-button.operator{
+                background-color: #f98410;
+                border: #e47a12 solid 2px;
+                h4{
+                    color: white;
+                }
+            }
+            .calc-button.operator:hover{
+                background-color: #e47a12;
+            }
+        }
+    }
+}
