@@ -88,6 +88,29 @@ export default function App() {
     }
   }, [display])
 
+  useEffect(() => {
+    const handleKey = (e) => {
+      const k = e.key
+      if (/^\d$/.test(k)) {
+        handleNumber(k)
+      } else if (k === 'Escape') {
+        handleClear()
+      } else if (k === '+' || k === '-' || k === '*' || k === '/') {
+        if (k === '/') {
+          handleOperator('÷')
+        } else {
+          handleOperator(k)
+        }
+      } else if (k === 'Enter') {
+        handleEquals()
+      }
+    }
+    document.addEventListener('keydown', handleKey)
+    return () => {
+      document.removeEventListener('keydown', handleKey)
+    }
+  })
+
   return (
     <div className="body">
       <div className="container">
