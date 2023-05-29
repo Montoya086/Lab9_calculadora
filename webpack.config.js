@@ -31,9 +31,8 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/, // to import images and fonts
-        loader: 'url-loader',
-        options: { limit: false },
+        test: /\.(jpe?g|svg|png|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
+        type: 'asset/resource',
       },
     ],
   },
